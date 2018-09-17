@@ -1,5 +1,7 @@
 /*
 	Thomas Wible interview site
+	
+	this code was written by me, using the Esri Javascript API 4.8 reference as a guide
 */
 
 //define the arrays which will be filled the the layer variables

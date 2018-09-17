@@ -1,6 +1,8 @@
 <?php
 /*
 	Thomas Wible interview site
+	
+	this code was sourced from a how-to on creating a form that sends an email using PHP many years ago, and then modified by me throughout the years
 */
 
 // pull the data from the form
