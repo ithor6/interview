@@ -1,0 +1,163 @@
+<!--
+	Thomas Wible Interview Site
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Thomas Wible Interview Site</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+<!-- load the CSS from jQuery and Esri, as well as my own CSS -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+<link rel="stylesheet" href="code/style.css">
+
+</head>
+
+<body>
+<div id="content">
+
+<div id="top">
+	<h1>Interview Site, Not For Public Use</h1>
+	<h1 id="data-header">Data Valid for Thursday, September 13, 9:00pm EDT</h1>
+</div> <!-- top -->
+
+<!-- Thurday map area-->
+<div id="map-area">
+
+<div id="map"></div>
+<!-- Thursday layer list -->
+<div class="layers">
+	<fieldset class="widget">
+		<legend>Layer List</legend>
+		<label for="check0">NHC Forecast Cone</label>
+			<input type="checkbox" class="cbox" id="check0" checked>
+		<label for="check1">NHC Forecast Track</label>
+			<input type="checkbox" class="cbox" id="check1" checked>
+		<label for="check2">NHC Watches/Warnings</label>
+			<input type="checkbox" class="cbox" id="check2" checked>
+		<label for="check3">NHC Most Likely Arrival Time of Tropical Storm Force Winds</label>
+			<input type="checkbox" class="cbox" id="check3">
+		<label for="check4">NHC Probability of Tropical Storm Force Winds</label>
+			<input type="checkbox" class="cbox" id="check4">
+		<label for="check5">WPC Flood Outlook</label>
+			<input type="checkbox" class="cbox" id="check5">
+		<label for="check6">WPC Day 2 Excessive Rainfall Outlook</label>
+			<input type="checkbox" class="cbox" id="check6">
+		<label for="check7">WPC Day 1-3 Precipitation Forecast</label>
+			<input type="checkbox" class="cbox" id="check7">
+	</fieldset>
+</div> <!-- layers -->
+
+</div> <!-- map-area -->
+
+<!-- live map area -->
+<div id="map-area-live">
+
+<div id="map-live"></div>
+<!-- live layer list -->
+<div class="layers">
+	<fieldset class="widget">
+		<legend>Layer List</legend>
+		<label for="live0">NHC Forecast Cone</label>
+			<input type="checkbox" class="cbox" id="live0" checked>
+		<label for="live1">NHC Forecast Track</label>
+			<input type="checkbox" class="cbox" id="live1" checked>
+		<label for="live2">NHC Watches/Warnings</label>
+			<input type="checkbox" class="cbox" id="live2" checked>
+		<label for="live3">NWS Radar</label>
+			<input type="checkbox" class="cbox" id="live3" checked>
+		<label for="live4">WPC Flood Outlook</label>
+			<input type="checkbox" class="cbox" id="live4">
+		<label for="live5">WPC Day 1 Excessive Rainfall Outlook</label>
+			<input type="checkbox" class="cbox" id="live5">
+		<label for="live6">WPC Day 1-3 Precipitation Forecast</label>
+			<input type="checkbox" class="cbox" id="live6">
+	</fieldset>
+</div> <!-- layers -->
+
+</div> <!-- map-area-live -->
+
+<div id="button-area" class="widget">
+	<button type="button" id="switch">Switch to Live Data</button>
+</div>
+
+<!-- NWS watch -->
+<div id="nws">
+	<h2>From the National Weather Service Sterling, VA Weather Forecast Office</h2>
+	
+	<p>Coastal Hazard Message<br>
+	National Weather Service Baltimore MD/Washington DC<br>
+	837 PM EDT Thu Sep 13 2018</p>
+	
+	<p>...COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 6 AM EDT FRIDAY...<br>
+	...COASTAL FLOOD WATCH REMAINS IN EFFECT FROM 6 AM EDT FRIDAY THROUGH LATE SATURDAY NIGHT...</p>
+	
+	<p>* LOCATIONS...Shoreline in the District of Columbia and Arlington County and the city of Alexandria.</p>
+	
+	<p>* TIDAL DEPARTURE...1.5 to 2.0 feet above normal through this tonight. Potentially 2 to 4 feet above normal Friday through Saturday night.</p>
+
+	<p>* TIMING...Around the time of high tide. The next two high tides at Washington Channel will be at 11:49 PM late this evening and 12:20 PM Friday afternoon. The two high tides at Alexandria will be at 12:07 am overnight into early Friday morning and 12:38 PM Friday afternoon.</p>
+
+	<p>* IMPACTS THROUGH TONIGHT...Shoreline inundation is expected along portions of the seawall adjacent to Ohio Drive and the Hains Point Loop Road and near the Tidal Basin today. Water is expected to approach the curb near the intersection of King Street and Strand Street in Alexandria today. Minor shoreline inundation up to one foot above ground is possible elsewhere.</p>
+
+	<p>* POTENTIAL IMPACTS FOR FRIDAY THROUGH SATURDAY EVENING... The unprotected area on the Southwest Waterfront at the DC Seafood Market may flood. Water may approach parts of the Hains Point Loop Road. Water may approach buildings near King Street and Union Street. Shoreline inundation up to one foot above ground is possible elsewhere.</p>
+
+	<p>PRECAUTIONARY/PREPAREDNESS ACTIONS... A Coastal Flood Advisory indicates that onshore winds and tides will combine to generate flooding of low areas along the shore.<p>
+
+	<p>A Coastal Flood Watch means that conditions favorable for flooding are expected to develop. Coastal residents should be alert for later statements or warnings, and take action to protect property.</p>
+	
+	<p>For more information visit <a href="https://www.weather.gov/lwx/" target="_blank">NWS Sterling WFO</a></p>
+</div> <!-- nws -->
+
+<!-- DHS preparedness -->
+<div id="preparedness">
+	<h2>From the Department of Homeland Security</h2>
+	<p>When a hurricane is 36 hours from arriving
+	<ul>
+		<li>Turn on your TV or radio in order to get the latest weather updates and emergency instructions.</li>
+		<li>Restock your emergency preparedness kit. Include food and water sufficient for at least three days, medications, a flashlight, batteries, cash, and first aid supplies.</li>
+		<li>Plan how to communicate with family members if you lose power. For example, you can call, text, email or use social media. Remember that during disasters, sending text messages is usually reliable and faster than making phone calls because phone lines are often overloaded.</li>
+		<li>Review your evacuation zone, evacuation route and shelter locations. Plan with your family. You may have to leave quickly so plan ahead.</li>
+		<li>Keep your car in good working condition, and keep the gas tank full; stock your vehicle with emergency supplies and a change of clothes.</li>
+		<li>If you have NFIP flood insurance, your policy may cover up to $1000 in loss avoidance measures, like sandbags and water pumps, to protect your insured property. You should keep copies of all receipts and a record of the time spent performing the work. They should be submitted to your insurance adjuster when you file a claim to be reimbursed. Visit <a href="www.fema.gov/media-library/assets/documents/137860" target="_blank">www.fema.gov/media-library/assets/documents/137860</a> to learn more.</li>
+	</ul>
+	For more information visit <a href="https://www.ready.gov/hurricanes" target="_blank">Ready.gov</a></p>
+</div> <!-- preparedness -->
+
+<!-- feedback form -->
+<div id="feedback-area">
+	<h2>Feedback</h2>
+	<form id="feedback-form" class="widget" method="post" name="feedback-form" action="code/feedback.php">
+		<label>Name: <input type="text" name="name"></label><br>
+		<label>Email: <input type="text" name="email"></label><br>
+		<label>Comments: <textarea name="feedback"></textarea></label><br>
+		<input type="submit" value="Send">
+	</form>
+</div> <!-- feedback-area -->
+
+</div> <!-- content -->
+
+<!-- load the API for jQuery, jQuery UI, and Esri, as well as my own map JS file -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://js.arcgis.com/4.8/"></script>
+<script src="code/map.js"></script>
+
+<script>
+	//jQuery UI code to initiate the style used for the checkboxes and buttons. pulled from the jQuery UI API documentation.
+  $( function() {
+    $( ".widget input[type=checkbox]" ).checkboxradio();
+  });
+  
+  $( function() {
+    $( ".widget input[type=submit], .widget button" ).button();
+  });
+</script>
+
+</body>
+</html>
