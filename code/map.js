@@ -155,11 +155,13 @@ function switchMap(){
 		$("#data-header").css("display", "none");
 		$("#map-area-live").css("display", "block");
 		$("#switch").html("Switch to Thursday Data");
+		console.log("switch to live");
 	}else{
 		$("#map-area").css("display", "block");
 		$("#data-header").css("display", "block");
 		$("#map-area-live").css("display", "none");		
 		$("#switch").html("Switch to Live Data");
+		console.log("switch to thursday");
 	}
 }
 
